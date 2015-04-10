@@ -31,17 +31,12 @@ if [[ `uname` == 'Darwin' ]]; then
     echo 'Installing Homebrew...'
       ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/homebrew/go/install)"
       brew update
-      brew install htop mysql nginx node ruby
+      # brew install htop mysql nginx node ruby
   fi
 
   echo 'Tweaking OS X...'
     source 'etc/osx.sh'
 
-  # http://github.com/sindresorhus/quick-look-plugins
-  echo 'Installing Quick Look plugins...'
-    brew tap phinze/homebrew-cask
-    brew install brew-cask
-    brew cask install suspicious-package quicklook-json qlmarkdown qlstephen qlcolorcode
 fi
 
 echo 'Symlinking config files...'
@@ -65,23 +60,12 @@ open_apps() {
   echo 'Install apps:'
   echo 'Firefox:'
   open http://www.mozilla.org/en-US/firefox/new/
-  echo 'Dropbox:'
-  open https://www.dropbox.com
   echo 'Chrome:'
   open https://www.google.com/intl/en/chrome/browser/
-  echo 'Sequel Pro:'
-  open http://www.sequelpro.com
   echo 'Skype:'
   open http://www.skype.com/en/download-skype/skype-for-computer/
-  echo 'Toggl:'
-  open https://www.toggl.com
-  echo 'Tower:'
-  open http://www.git-tower.com
   echo 'Transmission:'
   open http://www.transmissionbt.com
-  echo 'VLC:'
-  open http://www.videolan.org/vlc/index.html
-  echo 'Pixelmator!'
 }
 
 echo 'Should I give you links for system applications (e.g. Skype, Tower, VLC)?'

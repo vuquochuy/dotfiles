@@ -59,11 +59,11 @@ sudo tmutil disablelocal
 sudo pmset -a hibernatemode 0
 
 # Remove the sleep image file to save disk space
-sudo rm /Private/var/vm/sleepimage
+sudo rm /private/var/vm/sleepimage
 # Create a zero-byte file instead…
-sudo touch /Private/var/vm/sleepimage
+sudo touch /private/var/vm/sleepimage
 # …and make sure it can’t be rewritten
-sudo chflags uchg /Private/var/vm/sleepimage
+sudo chflags uchg /private/var/vm/sleepimage
 
 # Disable the sudden motion sensor as it’s not useful for SSDs
 sudo pmset -a sms 0
@@ -128,12 +128,12 @@ sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Vol
 defaults write com.apple.spotlight orderedItems -array \
         '{"enabled" = 1;"name" = "APPLICATIONS";}' \
         '{"enabled" = 1;"name" = "SYSTEM_PREFS";}' \
-        '{"enabled" = 1;"name" = "DIRECTORIES";}' \
-        '{"enabled" = 1;"name" = "PDF";}' \
+        '{"enabled" = 0;"name" = "DIRECTORIES";}' \
+        '{"enabled" = 0;"name" = "PDF";}' \
         '{"enabled" = 0;"name" = "FONTS";}' \
         '{"enabled" = 0;"name" = "DOCUMENTS";}' \
         '{"enabled" = 0;"name" = "MESSAGES";}' \
-        '{"enabled" = 0;"name" = "CONTACT";}' \
+        '{"enabled" = 1;"name" = "CONTACT";}' \
         '{"enabled" = 0;"name" = "EVENT_TODO";}' \
         '{"enabled" = 0;"name" = "IMAGES";}' \
         '{"enabled" = 0;"name" = "BOOKMARKS";}' \

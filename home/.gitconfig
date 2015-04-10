@@ -1,6 +1,6 @@
 [user]
-	name = Paul Miller
-	email = paul@paulmillr.com
+	name = Huy Vu
+	email = vuquochuy@gmail.com
 
 [github]
   user = paulmillr
@@ -75,3 +75,8 @@
 	templatedir = ~/.git_template
 [ghi]
 	token = !security find-internet-password -a paulmillr -s github.com -l 'ghi token' -w
+[mergetool "sublime"]
+	cmd = subl -w $MERGED
+	trustExitCode = false
+[merge]
+	tool = sublime
